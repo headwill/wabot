@@ -1,0 +1,33 @@
+import json
+
+# Dados configurados no JSON
+dados = {
+    "telegram": {
+        "bot_token": "7526642542:AAEu_z0DMlA_GvLTRu81KEbNxp7I",
+        "chat_id": "-1002258491083"
+    },
+    "cryptopanic": {
+        "auth_token": "a621ea399c5ebf8b4d70068feb22d358e8482066",
+        "base_url": "https://cryptopanic.com/api/free/v1/posts/"
+    },
+    "news_sample": [
+        {
+            "title": "Bitcoin hits new high",
+            "translated_title": "Bitcoin atinge nova alta",
+            "url": "https://example.com/bitcoin-high",
+            "published_at": "2024-12-21T12:34:56Z"
+        },
+        {
+            "title": "Ethereum gains momentum",
+            "translated_title": "Ethereum ganha força",
+            "url": "https://example.com/ethereum-momentum",
+            "published_at": "2024-12-21T11:30:00Z"
+        }
+    ]
+}
+
+# Salvando o JSON em um arquivo
+with open("dados_config.json", "w", encoding="utf-8") as arquivo:
+    json.dump(dados, arquivo, indent=4, ensure_ascii=False)
+
+print("Arquivo JSON criado com sucesso!")
